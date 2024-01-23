@@ -1,12 +1,20 @@
-import tkinter
 import matplotlib.pyplot as plt
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
 
+def create_bar_chart():
+    # Data for carbon emissions from different sectors
+    sectors = ['Transportation', 'Industry', 'Energy Production']
+    emissions = [30, 40, 30]  # Example values, you can replace with actual data
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+    # Plotting the bar chart
+    plt.bar(sectors, emissions, color=['blue', 'orange', 'green'])
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    # Adding labels and title
+    plt.xlabel('Sectors')
+    plt.ylabel('Carbon Emissions (%)')
+    plt.title('Carbon Emissions by Sector')
+
+    # Display the bar chart
+    plt.show()
+
+# Call the function to create and display the bar chart
+create_bar_chart()
